@@ -1,0 +1,23 @@
+First open Terminal
+
+run this command
+ssh-keygen -t ed25519 -C "arslankhan21.te@gmail.com"  (use your email).
+
+then enter and enter and open the .ssh directory in any editor like vscode
+edit the files id_ed25519.pub to id_ed25519_arslan.pub and id_ed25519 to id_ed25519_arslan
+
+now create a config file in .ssh directory and paste this code
+  Host arslan github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_ed25519_arslan
+
+
+now create create a github account on this email arslankhan21.te@gmail.com
+Go to settings -> then click on SSH and GPG keys -> create new SSH keys and give title and copy the keys of id_ed25519_arslan and paste in Key input and click on ADD SSH KEY.
+
+
+Now open the github repository and click on code then click on SSH and copy the SSH and open terminal and write git clone and  paste the SSH (git@github.com:usamashah01110/montech_fi.git)
+
+
+now remove the github.com and paste arslan like this (git@arslan:usamashah01110/montech_fi.git) and enter and clone the project successfully.
